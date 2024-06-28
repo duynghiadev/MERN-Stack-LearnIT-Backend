@@ -1,0 +1,54 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "duynghiadev",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "duynghia",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjdhODVmYzliMjlmNDE1NjRhYTFhNmUiLCJpYXQiOjE3MTk0NTMyMjR9.8EMcLzcDmAyPPoaoWH-IjY-ne9FnzWyiVl0AkJCvWAA
+
+{
+  "title": "Python",
+  "description": "Python",
+  "url": "python.com",
+  "status": "LEARNING"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjdhODVmYzliMjlmNDE1NjRhYTFhNmUiLCJpYXQiOjE3MTk0NTMyMjR9.8EMcLzcDmAyPPoaoWH-IjY-ne9FnzWyiVl0AkJCvWAA
+
+###
+
+PUT http://localhost:5000/api/posts/667cc6557b000d4244a6489c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjdhODVmYzliMjlmNDE1NjRhYTFhNmUiLCJpYXQiOjE3MTk0NTMyMjR9.8EMcLzcDmAyPPoaoWH-IjY-ne9FnzWyiVl0AkJCvWAA
+
+{
+  "title": "React",
+  "description": "React is perfect",
+  "url": "Vue.org",
+  "status": "LEARNING"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/667a9cb14da97b48d0884eb2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjdhODVmYzliMjlmNDE1NjRhYTFhNmUiLCJpYXQiOjE3MTk0NTMyMjR9.8EMcLzcDmAyPPoaoWH-IjY-ne9FnzWyiVl0AkJCvWAA
+
